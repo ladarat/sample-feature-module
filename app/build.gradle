@@ -23,7 +23,6 @@ android {
     flavorDimensions 'platform', 'environment'
     productFlavors {
         google { dimension 'platform' }
-        huawei { dimension 'platform' }
 
         dev {
             applicationIdSuffix ".dev"
