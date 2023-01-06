@@ -2,6 +2,7 @@ package com.example.login
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.Button
 import androidx.compose.material.Text
@@ -27,11 +28,10 @@ fun LoginDialog(
         ),
         content =
         {
-            Box(
+            Column(
                 modifier = Modifier
                     .fillMaxSize()
-                    .background(Color.White),
-                contentAlignment = Alignment.Center
+                    .background(Color.White)
             ) {
                 var userText by remember { mutableStateOf("") }
                 var passText by remember { mutableStateOf("") }
