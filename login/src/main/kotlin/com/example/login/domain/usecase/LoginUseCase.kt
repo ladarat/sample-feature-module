@@ -3,15 +3,16 @@ package com.example.login.domain.usecase
 import com.example.login.data.model.LoginResponse
 import com.example.login.domain.LoginInfModel
 import com.example.login.domain.LoginRepository
+import dagger.hilt.android.HiltAndroidApp
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
+import javax.inject.Inject
 
 interface LoginUseCase {
     suspend fun execute(user: String, pass: String): Flow<LoginInfModel>
 }
 
-class LoginUseCaseImpl(private val loginRepository: LoginRepository) : LoginUseCase {
-
+class LoginUseCaseImpl @Inject constructor(private val loginRepository: LoginRepository) : LoginUseCase {
     override suspend fun execute(user: String, pass: String) = flow {
         loginRepository.loginByUser(user, pass)
             .collect {

@@ -10,6 +10,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.hilt.navigation.compose.hiltViewModel
 import com.example.login.data.repository.LoginRepositoryImp
 import com.example.login.data.service.LoginService
 import com.example.login.domain.usecase.LoginUseCase
@@ -18,22 +19,19 @@ import com.example.login.presentation.LoginViewModel
 import com.example.login.presentation.ui.LoginContainer
 import com.example.login.presentation.ui.LoginDialog
 import com.example.sample_feature_module.ui.theme.SamplefeaturemoduleTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             SamplefeaturemoduleTheme {
-                // A surface container using the 'background' color from the theme
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    LoginContainer(
-                        LoginViewModel(
-                            LoginUseCaseImpl(LoginRepositoryImp())
-                        )
-                    )
+                    LoginContainer( hiltViewModel())
                 }
             }
         }

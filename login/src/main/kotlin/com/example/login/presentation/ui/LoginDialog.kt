@@ -1,7 +1,5 @@
 package com.example.login.presentation.ui
 
-import android.annotation.SuppressLint
-import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -17,9 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
-import com.example.login.data.repository.LoginRepositoryImp
 import com.example.login.domain.LoginInfModel
-import com.example.login.domain.usecase.LoginUseCaseImpl
 import com.example.login.presentation.LoginStateView
 import com.example.login.presentation.LoginViewModel
 
@@ -101,19 +97,19 @@ fun LoginContainer(loginViewModel: LoginViewModel) {
     val loginSuccessState = loginViewModel.onLoginSuccess.collectAsState()
     loginSuccessState.value.let { _loginSuccessState ->
         when (_loginSuccessState) {
-            is LoginStateView.nonLogin -> {
+            is LoginStateView.NonLogin -> {
                 LoginDialog(loginViewModel, true)
             }
-            is LoginStateView.loading -> {
+            is LoginStateView.Loading -> {
                 CircularProgressIndicator()
             }
-            is LoginStateView.loadError -> {
+            is LoginStateView.LoadError -> {
                 LoginDialog(
                     loginViewModel,
                     false
                 )
             }
-            is LoginStateView.loadSuccess -> {
+            is LoginStateView.LoadSuccess -> {
                 LoginInfo(_loginSuccessState.loginInfModel)
             }
         }
