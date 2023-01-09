@@ -1,8 +1,6 @@
 package com.example.core.di
 
-import android.provider.SyncStateContract
 import com.example.core.BuildConfig
-import com.example.core.BuildConfig.BASE_URL
 import com.example.core.createOkHttpClient
 import dagger.Module
 import dagger.Provides

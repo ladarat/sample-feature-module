@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+<SmellBaseline>
+  <ManuallySuppressedIssues></ManuallySuppressedIssues>
+  <CurrentIssues>
+    <ID>FunctionNaming:LoginDialog.kt$@Composable fun LoginContainer(loginViewModel: LoginViewModel)</ID>
+    <ID>FunctionNaming:LoginDialog.kt$@Composable fun LoginInfo( loginInfModel: LoginInfModel? )</ID>
+    <ID>FunctionNaming:LoginDialog.kt$@OptIn(ExperimentalComposeUiApi::class) @Composable fun LoginDialog( loginViewModel: LoginViewModel, isLogin: Boolean )</ID>
+    <ID>FunctionNaming:MainActivity.kt$@Composable fun Greeting(name: String)</ID>
+    <ID>FunctionNaming:MainActivity.kt$@Preview(showBackground = true) @Composable fun DefaultPreview()</ID>
+    <ID>FunctionNaming:Theme.kt$@Composable fun SamplefeaturemoduleTheme( darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable () -&gt; Unit )</ID>
+    <ID>MagicNumber:Color.kt$0xFF03DAC5</ID>
+    <ID>MagicNumber:Color.kt$0xFF3700B3</ID>
+    <ID>MagicNumber:Color.kt$0xFF6200EE</ID>
+    <ID>MagicNumber:Color.kt$0xFFBB86FC</ID>
+    <ID>MagicNumber:RetrofitBuilder.kt$20</ID>
+    <ID>MagicNumber:RetrofitBuilder.kt$30</ID>
+    <ID>NewLineAtEndOfFile:AssignmentApplication.kt$com.example.sample_feature_module.AssignmentApplication.kt</ID>
+    <ID>NewLineAtEndOfFile:Color.kt$com.example.sample_feature_module.ui.theme.Color.kt</ID>
+    <ID>NewLineAtEndOfFile:CoreModule.kt$com.example.core.di.CoreModule.kt</ID>
+    <ID>NewLineAtEndOfFile:ExampleInstrumentedTest.kt$com.example.login.ExampleInstrumentedTest.kt</ID>
+    <ID>NewLineAtEndOfFile:ExampleInstrumentedTest.kt$com.example.sample_feature_module.ExampleInstrumentedTest.kt</ID>
+    <ID>NewLineAtEndOfFile:ExampleUnitTest.kt$com.example.core.ExampleUnitTest.kt</ID>
+    <ID>NewLineAtEndOfFile:ExampleUnitTest.kt$com.example.login.ExampleUnitTest.kt</ID>
+    <ID>NewLineAtEndOfFile:ExampleUnitTest.kt$com.example.sample_feature_module.ExampleUnitTest.kt</ID>
+    <ID>NewLineAtEndOfFile:LoginInfModel.kt$com.example.login.domain.LoginInfModel.kt</ID>
+    <ID>NewLineAtEndOfFile:LoginInfModel.kt$com.example.login.presentation.model.LoginInfModel.kt</ID>
+    <ID>NewLineAtEndOfFile:LoginModule.kt$com.example.login.di.LoginModule.kt</ID>
+    <ID>NewLineAtEndOfFile:LoginRepository.kt$com.example.login.domain.LoginRepository.kt</ID>
+    <ID>NewLineAtEndOfFile:LoginRepositoryImp.kt$com.example.login.data.repository.LoginRepositoryImp.kt</ID>
+    <ID>NewLineAtEndOfFile:LoginService.kt$com.example.login.data.service.LoginService.kt</ID>
+    <ID>NewLineAtEndOfFile:LoginUseCase.kt$com.example.login.domain.usecase.LoginUseCase.kt</ID>
+    <ID>NewLineAtEndOfFile:LoginViewModel.kt$com.example.login.presentation.LoginViewModel.kt</ID>
+    <ID>NewLineAtEndOfFile:MainActivity.kt$com.example.sample_feature_module.MainActivity.kt</ID>
+    <ID>NewLineAtEndOfFile:RetrofitBuilder.kt$com.example.core.RetrofitBuilder.kt</ID>
+    <ID>NewLineAtEndOfFile:Shape.kt$com.example.sample_feature_module.ui.theme.Shape.kt</ID>
+    <ID>NewLineAtEndOfFile:Theme.kt$com.example.sample_feature_module.ui.theme.Theme.kt</ID>
+    <ID>NewLineAtEndOfFile:Type.kt$com.example.sample_feature_module.ui.theme.Type.kt</ID>
+    <ID>PackageNaming:AppModule.kt$package com.example.sample_feature_module.di</ID>
+    <ID>PackageNaming:AssignmentApplication.kt$package com.example.sample_feature_module</ID>
+    <ID>PackageNaming:Color.kt$package com.example.sample_feature_module.ui.theme</ID>
+    <ID>PackageNaming:ExampleInstrumentedTest.kt$package com.example.sample_feature_module</ID>
+    <ID>PackageNaming:ExampleUnitTest.kt$package com.example.sample_feature_module</ID>
+    <ID>PackageNaming:MainActivity.kt$package com.example.sample_feature_module</ID>
+    <ID>PackageNaming:Shape.kt$package com.example.sample_feature_module.ui.theme</ID>
+    <ID>PackageNaming:Theme.kt$package com.example.sample_feature_module.ui.theme</ID>
+    <ID>PackageNaming:Type.kt$package com.example.sample_feature_module.ui.theme</ID>
+    <ID>ThrowingExceptionsWithoutMessageOrCause:LoginViewModel.kt$LoginViewModel$Throwable()</ID>
+    <ID>WildcardImport:ExampleInstrumentedTest.kt$import org.junit.Assert.*</ID>
+    <ID>WildcardImport:ExampleUnitTest.kt$import org.junit.Assert.*</ID>
+    <ID>WildcardImport:LoginDialog.kt$import androidx.compose.runtime.*</ID>
+    <ID>WildcardImport:LoginViewModel.kt$import kotlinx.coroutines.flow.*</ID>
+  </CurrentIssues>
+</SmellBaseline>
