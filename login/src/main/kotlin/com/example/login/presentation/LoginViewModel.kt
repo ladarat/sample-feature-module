@@ -5,10 +5,7 @@ import com.example.login.domain.LoginInfModel
 import com.example.login.domain.usecase.LoginUseCase
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.catch
-import kotlinx.coroutines.flow.onStart
+import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 
 class LoginViewModel(private val loginUseCase: LoginUseCase) : ViewModel() {
@@ -27,19 +24,22 @@ class LoginViewModel(private val loginUseCase: LoginUseCase) : ViewModel() {
                     _onLoginSuccess.value = LoginStateView.loadError(it)
                 }
                 .collect { loginSuccess ->
-                    loginSuccess.age?.let {
+                    if (loginSuccess.age == null) {
                         _onLoginSuccess.value = LoginStateView.loadSuccess(loginSuccess)
+                    } else {
+                        _onLoginSuccess.value = LoginStateView.loadError(Throwable())
                     }
                 }
         }
     }
-    fun retryLogin(){
+
+    fun retryLogin() {
         _onLoginSuccess.value = LoginStateView.nonLogin
     }
 }
 
 sealed class LoginStateView {
-    object nonLogin: LoginStateView()
+    object nonLogin : LoginStateView()
     object loading : LoginStateView()
     data class loadError(val err: Throwable?) : LoginStateView()
     data class loadSuccess(val loginInfModel: LoginInfModel?) : LoginStateView()
