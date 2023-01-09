@@ -10,7 +10,13 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.login.LoginDialog
+import com.example.login.data.repository.LoginRepositoryImp
+import com.example.login.data.service.LoginService
+import com.example.login.domain.usecase.LoginUseCase
+import com.example.login.domain.usecase.LoginUseCaseImpl
+import com.example.login.presentation.LoginViewModel
+import com.example.login.presentation.ui.LoginContainer
+import com.example.login.presentation.ui.LoginDialog
 import com.example.sample_feature_module.ui.theme.SamplefeaturemoduleTheme
 
 class MainActivity : ComponentActivity() {
@@ -23,7 +29,11 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    LoginDialog()
+                    LoginContainer(
+                        LoginViewModel(
+                            LoginUseCaseImpl(LoginRepositoryImp())
+                        )
+                    )
                 }
             }
         }

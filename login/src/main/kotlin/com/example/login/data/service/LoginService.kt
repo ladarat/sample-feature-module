@@ -6,9 +6,8 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface LoginService {
-    @GET
+    @GET("/")
     suspend fun loginByUserNamePass(
-        @Query("name") name: String,
-        @Query("pass") pass: String
+        @Query("name") name: String
     ): Response<LoginResponse>
 }
